@@ -1,0 +1,25 @@
+<nav>
+  <ul>
+    <li>
+      <a
+        [routerLink]="['/home']"
+        [routerLinkActive]="'active'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        ariaCurrentWhenActive="page"
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        [routerLink]="['/get-value']"
+        [routerLinkActive]="'active'"
+        [routerLinkActiveOptions]="{ exact: true }"
+        ariaCurrentWhenActive="page"
+      >
+        Get Value Component
+      </a>
+    </li>
+  </ul>
+</nav>
+<router-outlet />

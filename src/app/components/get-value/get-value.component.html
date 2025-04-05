@@ -1,0 +1,59 @@
+<h2>5 Different Ways to Get Input Field Value in Angular</h2>
+
+<section class="get-value-container">
+  <div>
+    <h3>1. Template Reference Variable ($ syntax)</h3>
+    <input type="text" #myInput1 />
+    <button (click)="getInputValue(myInput1.value)">Click</button>
+    <div class="label bold"><strong>Input value: </strong></div>
+    <div class="div-value">
+      <div>{{ myInput1.value }}</div>
+    </div>
+
+    <h3>2. Two-way Data Binding Using NgModel</h3>
+    <!-- *****************************************
+	NgModelOptions
+	[(ngModel)]="myInput2" [ngModelOptions]="{updateOn: 'blur'}"
+	updateOn: spécifie quand la valeur de ngModel doit être mise à jour.
+	Les options possibles sont "blur" (par défaut), "submit", "change"
+	ou une combinaison de ces événements séparés par une virgule.
+	standalone : Cette option permet de spécifier si
+	le contrôle ngModel doit être lié à d'autres contrôles de formulaire.
+	Si standalone est défini sur true,
+	ngModel ne sera pas lié à d'autres contrôles de formulaire,
+	et ne sera pas affecté par la validation ou la soumission du formulaire.
+	Par défaut, standalone est défini sur false
+	***************************************** -->
+    <input type="text" [(ngModel)]="myInput2" />
+    <!-- <button (click)="getTwoWayBinding()">Click</button> -->
+    <div class="label bold"><strong>Input value: </strong></div>
+    <div class="div-value">
+      <div>{{ myInput2 }}</div>
+    </div>
+  </div>
+
+  <div>
+    <h3>3. Use Reactive Form Approach</h3>
+    <form [formGroup]="form">
+      <input type="text" formControlName="name" />
+      <button (click)="getReactiveFormValue()">Click</button>
+    </form>
+    <div class="div-value">
+      <div>{{ this.name }}</div>
+    </div>
+
+    <h3>4. Event Binding With (input) Event</h3>
+    <input type="text" (input)="onInputChange($event)" />
+    <div class="div-value">
+      <div>{{ inputEvent }}</div>
+    </div>
+
+    <h3>5. Use &commat;ViewChild Decorator</h3>
+    <input type="text" #inputViewChild />
+    <button (click)="getInputViewChild()">Click</button>
+    <div class="label bold"><strong>Input value: </strong></div>
+    <div class="div-value">
+      <div>{{ inputViewChild?.value }}</div>
+    </div>
+  </div>
+</section>

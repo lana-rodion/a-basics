@@ -1,0 +1,30 @@
+<article>
+  <img
+    class="listing-photo"
+    [src]="housingLocation?.photo"
+    alt="Exterior photo of {{ housingLocation?.name }}"
+    crossorigin
+  />
+  <section class="listing-description">
+    <h2 class="listing-heading">{{ housingLocation?.name }}</h2>
+    <p class="listing-location">
+      {{ housingLocation?.city }}, {{ housingLocation?.state }}
+    </p>
+  </section>
+  <section class="listing-features">
+    <h2 class="section-heading">About this housing location</h2>
+    <ul>
+      <li>Units available: {{ housingLocation?.availableUnits }}</li>
+      @if(housingLocation?.wifi === true) {
+      <li>Does this location have wifi: Yes</li>
+      } @else {
+      <li>Does this location have wifi: No</li>
+      }
+      @if(housingLocation?.laundry === true) {
+      <li>Does this location have laundry: Yes</li>
+      } @else {
+      <li>Does this location have laundry: No</li>
+      }
+    </ul>
+  </section>
+</article>
