@@ -68,6 +68,13 @@ p {
   color: var(--gray-700);
 }
 
+.mt-2 {
+  margin-top: 2rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
 main {
   width: 100%;
   height: 100vh;
@@ -206,6 +213,15 @@ input:focus,
 input:active {
   border: 1px solid var(--electric-violet);
   outline: none;
+}
+input::placeholder {
+  color: var(--gray-400);
+  font-size: 14px;
+  font-style: italic;
+}
+input:focus::placeholder,
+input:active::placeholder {
+  color: var(--gray-700);
 }
 
 button {

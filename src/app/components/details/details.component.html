@@ -19,12 +19,52 @@
       <li>Does this location have wifi: Yes</li>
       } @else {
       <li>Does this location have wifi: No</li>
-      }
-      @if(housingLocation?.laundry === true) {
+      } @if(housingLocation?.laundry === true) {
       <li>Does this location have laundry: Yes</li>
       } @else {
       <li>Does this location have laundry: No</li>
       }
     </ul>
+  </section>
+  <section class="listing-apply">
+    <h2 class="section-heading">Apply now to live here</h2>
+    <p>To apply for this housing location, please fill out the form below.</p>
+
+    <form
+      class="mt-2 mb-2"
+      [formGroup]="applyForm"
+      (submit)="submitApplication()"
+      action=""
+      method=""
+    >
+      <label for="first-name">First Name:</label>
+      <input
+        type="text"
+        id="first-name"
+        name="first-name"
+        placeholder="First Name"
+        required
+        formControlName="firstName"
+      />
+      <label for="last-name">Last Name:</label>
+      <input
+        type="text"
+        id="last-name"
+        name="last-name"
+        placeholder="Last Name"
+        required
+        formControlName="lastName"
+      />
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email"
+        required
+        formControlName="email"
+      />
+      <button type="submit">Apply now</button>
+    </form>
   </section>
 </article>
