@@ -245,6 +245,25 @@ button:hover {
   outline: none;
 }
 
+button.btn-clear {
+  margin-left: 4px;
+  margin-right: 4px;
+  background: transparent;
+  color: var(--gray-700);
+  border: 1px solid var(--gray-700);
+}
+button.btn-clear:hover {
+  background: var(--gray-400);
+  color: white;
+  border: 1px solid var(--gray-400);
+}
+button.btn-clear:focus,
+button.btn-clear:active {
+  color: white;
+  background: var(--orange-red);
+  border: 1px solid var(--orange-red);
+}
+
 .div-value {
   min-height: 40px;
   display: flex;

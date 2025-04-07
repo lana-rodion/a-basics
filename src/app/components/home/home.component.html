@@ -50,13 +50,28 @@
     <div>
       <section>
         <form>
-          <input type="text" placeholder="Filter by city" />
-          <button class="primary" type="button">Search</button>
+          <input type="text" id="search" placeholder="Filter by city" #filter />
+          <button
+            type="button"
+            (click)="filterResults(filter.value)"
+            class="ml-1"
+          >
+            Search
+          </button>
+          <button type="button" (click)="clearFilter()" class="btn-clear ml-1">
+            Clear
+          </button>
         </form>
+        @if(filteredLocationList.length > 0) {
+        <p>Available rentals: {{ filteredLocationList.length }}</p>
+        } @else {
+        <p>No locations found</p>
+        }
       </section>
+
       <section class="results">
         <app-housing-location
-          *ngFor="let housingLocation of housingLocationList"
+          *ngFor="let housingLocation of filteredLocationList"
           [housingLocation]="housingLocation"
         ></app-housing-location>
       </section>
