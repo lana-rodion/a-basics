@@ -61,3 +61,45 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Add and configure JSON server
+
+[JSON Server](https://www.npmjs.com/package/json-server) is an open source tool used to create mock REST APIs.
+
+1. Install json-server from npm by using the following command.
+
+```bash
+npm install -g json-server
+```
+
+2. In the root directory of your project, create a file called db.json. This is where you will store the data for the json-server.
+
+3. Test your your configuration. From the command line, at the root of your project run the following commands.
+
+```bash
+json-server --watch db.json
+```
+
+4. In your web browser, navigate to the [http://localhost:3000/name-of-data-stored] and confirm that the response includes the data stored in db.json.
+
+Index:
+http://localhost:3000/
+
+Static files:
+Serving ./public directory if it exists
+
+Endpoints:
+http://localhost:3000/name-of-data-stored
+
+## Update service to use web server instead of local array
+
+The data source has been configured, the next step is to update your web app to connect to it use the data.
+
+1. Update the code to remove housingLocationList property and the array containing the data.
+2. Add a string property called `url` and set its value to 'http://localhost:3000/locations'
+
+`url = 'http://localhost:3000/locations';`
+
+3. Update the `getAllHousingLocations` function to make a call to the web server you configured.
+4. Update the components to use asynchronous calls to the housing service
+5. Note: This lesson relies on the fetch browser API. For the support of interceptors, please refer to the [Http Client documentation](https://angular.dev/guide/http)
