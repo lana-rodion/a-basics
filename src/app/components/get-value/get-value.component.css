@@ -2,20 +2,31 @@
 @import "../../../styles.css";
 :host {
   display: block;
-  padding: 16px;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  overflow: hidden;
   position: absolute;
-  top: 6rem;
+  top: 9rem;
   background: white;
 }
 
 h2 {
   font-size: 1.5rem;
-  text-align: center;
+  text-align: left;
+  padding-inline: 3rem;
 }
 
 .get-value-container {
-  display: flex;
-  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 400px));
+  min-height: 0;
+  max-height: 100%;
+  gap: 0 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-bottom: 3rem;
+  overflow-y: auto;
+}
+
+.btn-reset {
+  margin-left: 3rem;
 }

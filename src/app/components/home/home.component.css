@@ -9,8 +9,6 @@
   overflow: hidden;
   position: absolute;
   top: 9rem;
-  width: 100vw;
-  background-color: aqua;
 }
 
 .form {
@@ -30,8 +28,8 @@
 
 .results {
   display: grid;
-  gap: 14px;
   grid-template-columns: repeat(auto-fill, minmax(240px, 400px));
+  gap: 14px;
   justify-content: space-between;
 }
 

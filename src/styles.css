@@ -66,6 +66,14 @@ p {
   color: var(--gray-700);
 }
 
+.ml-1 {
+  margin-left: 1rem;
+}
+
+.ml-3 {
+  margin-left: 3rem;
+}
+
 .mt-2 {
   margin-top: 2rem;
 }
@@ -162,8 +170,6 @@ button:hover {
 }
 
 button.btn-clear {
-  margin-left: 4px;
-  margin-right: 4px;
   background: transparent;
   color: var(--gray-700);
   border: 1px solid var(--gray-700);

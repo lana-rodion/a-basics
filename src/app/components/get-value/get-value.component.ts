@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, input, ViewChild } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -14,11 +14,23 @@ import {
 })
 export class GetValueComponent {
   myInput2: string = '';
+  myInput3: string = '';
   name: string = '';
   form = new FormGroup({
     name: new FormControl(),
   });
   inputEvent: string = '';
+
+  resetAllInputValues() {
+    const inputs = document.querySelectorAll('input');
+    inputs.forEach((input: HTMLInputElement) => {
+      input.value = '';
+    });
+    const divValues = document.querySelectorAll('.div-value div');
+    for (let i = 0; i < divValues.length; i++) {
+      divValues[i].innerHTML = '';
+    }
+  }
 
   // 1. Template Reference Variable ($ syntax)
   getInputValue(value: string) {
@@ -26,19 +38,14 @@ export class GetValueComponent {
     return value;
   }
 
-  // 2. Two-way Data Binding Using NgModel
-  /* getTwoWayBinding() {
-    console.log('Two Way Binding : ', this.myInput2);
-  } */
-
-  // 3. Use Reactive Form Approach
+  // 4. Use Reactive Form Approach
   getReactiveFormValue() {
     this.name = this.form.get('name')?.value;
     console.log('ReactiveForm name : ', this.name);
     return this.name;
   }
 
-  // 4. Event Binding With (input) Event
+  // 5. Event Binding With (input) Event
   onInputChange(event: any) {
     // If onInputChange(event: any) => event.target.value
     this.inputEvent = event.target.value;
@@ -48,7 +55,7 @@ export class GetValueComponent {
     return this.inputEvent;
   }
 
-  // 5. Use @ViewChild Decorator
+  // 6. Use @ViewChild Decorator
   @ViewChild('inputViewChild') inputViewChild?: ElementRef;
   getInputViewChild() {
     console.log(
