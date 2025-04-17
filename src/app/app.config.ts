@@ -10,13 +10,15 @@ import {
   provideProtractorTestingSupport,
   withEventReplay,
 } from '@angular/platform-browser';
+import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideProtractorTestingSupport(),
-    provideRouter(routeConfig, withComponentInputBinding()),
+    provideRouter(routeConfig, withComponentInputBinding(), withDebugTracing()),
     provideClientHydration(withEventReplay()),
+    provideHttpClient(),
   ],
 };
 

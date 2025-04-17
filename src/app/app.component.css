@@ -39,6 +39,7 @@ nav,
   z-index: 999;
 }
 
+/* Horizontal list */
 nav ul {
   list-style: none;
   margin: 0;
@@ -64,6 +65,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: white;
+  font-weight: 500;
 }
 
 nav ul li:focus {
@@ -73,7 +75,9 @@ nav ul li:focus {
 
 nav ul li:has(a.active) {
   box-shadow: 0 0.05rem 0.5rem 0 rgba(50, 51, 60, 0.5);
-  background-color: var(--vivid-pink);
+  background: var(--vivid-pink);
+  opacity: 1;
+  color: white;
 }
 
 nav ul li:hover {

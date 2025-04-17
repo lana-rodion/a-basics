@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+:host {
+  width: 100vw;
+  height: calc(100vh - 9rem);
+  display: block;
+  padding: 1rem 3rem 3rem;
+  position: absolute;
+  top: 9rem;
+}
+
+.main {
+  width: 100%;
+  margin: auto;
+}
+
+.data {
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-item {
+  height: 40px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.add-item a:hover,
+.add-item a:focus,
+.add-item a:active {
+  background-color: var(--vivid-pink);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.add-item a {
+  text-decoration: none;
+  min-width: 100px;
+  padding: 0.5rem 1rem;
+  background-color: var(--electric-violet);
+  color: white;
+  border-radius: 5px;
+}
+
+.container {
+  width: 100%;
+  margin: 50px auto;
+  overflow-x: auto;
+  font-size: 18px;
+}
+
+.container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.container th,
+td {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.container table th {
+  padding: 10px;
+}
+
+.container table th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.container table td {
+  padding: 7px;
+}
+
+.container table tr td a {
+  text-decoration: none;
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  .container table {
+    font-size: 14px;
+  }
+}

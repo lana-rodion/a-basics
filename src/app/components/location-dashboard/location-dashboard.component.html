@@ -1,0 +1,52 @@
+<section class="main">
+  <h2>Location Management</h2>
+  <div class="container">
+    <div class="add-item">
+      <a class="add-location" routerLink="/dashboard/location/create">
+        Add New Location
+      </a>
+    </div>
+    <p class="mb-2 bold">Total Locations: {{ count }}</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Location Name</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Available Units</th>
+          <th>Wi-fi</th>
+          <th>Laundry</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let location of housingLocationList; let i = index">
+          <td>{{ location.name }}</td>
+          <td>{{ location.city }}</td>
+          <td>{{ location.state }}</td>
+          <td>{{ location.availableUnits }}</td>
+          <td>{{ location.wifi }}</td>
+          <td>{{ location.laundry }}</td>
+          <td>
+            <a
+              [routerLink]="['/dashboard/location/details', location.id]"
+              [routerLinkActive]="'active'"
+            >
+              Details
+            </a>
+            <a
+              [routerLink]="['/dashboard/location/update', location.id]"
+              [routerLinkActive]="'active'"
+            >
+              Update
+            </a>
+            <a href="" (click)="delete(location.id); $event.preventDefault()">
+              Delete
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
