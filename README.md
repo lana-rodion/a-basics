@@ -103,3 +103,11 @@ The data source has been configured, the next step is to update your web app to 
 3. Update the `getAllHousingLocations` function to make a call to the web server you configured.
 4. Update the components to use asynchronous calls to the housing service
 5. Note: This lesson relies on the fetch browser API. For the support of interceptors, please refer to the [Http Client documentation](https://angular.dev/guide/http)
+
+## Running Angular Application and JSON-Server With Same Startup Script
+
+`"start": "json-server --watch db.json & ng serve"`
+
+## Command in terminal to running application with JSON-Server
+
+`npm run start`
