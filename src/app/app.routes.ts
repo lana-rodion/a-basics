@@ -39,7 +39,7 @@ export const routeConfig: Routes = [
     title: 'Add',
   },
   {
-    path: 'edit/:id',
+    path: 'crud/edit/:id',
     component: EditComponent,
     title: 'Edit',
   },

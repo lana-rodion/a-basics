@@ -14,6 +14,7 @@
     </button>
   </div>
   <!--This is add button, Clicking on it will lead to add component, where the logic is written-->
+  <!-- TODO: Search with [(ngModel)]="term"-->
   <div class="col-sm-4">
     <input
       type="text"
@@ -21,7 +22,6 @@
       id=""
       class="form-control"
       placeholder="Searching Someone..?"
-      [(ngModel)]="term"
     />
   </div>
   <!--This is a search box. We can search anyone-->
@@ -41,7 +41,7 @@
     <!-- | filter : term -->
     <tr
       *ngFor="
-        let e of empData
+        let e of empDataArray
           | paginate : { itemsPerPage: countPerPage, currentPage: p }
       "
     >

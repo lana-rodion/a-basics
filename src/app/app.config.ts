@@ -10,19 +10,19 @@ import {
   provideProtractorTestingSupport,
   withEventReplay,
 } from '@angular/platform-browser';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideProtractorTestingSupport(),
-    provideRouter(routeConfig, withComponentInputBinding(), withDebugTracing()),
+    provideRouter(routeConfig, withComponentInputBinding()),
     provideClientHydration(withEventReplay()),
-    provideHttpClient(),
+    provideHttpClient(withFetch()),
   ],
 };
 
-// withDebugTracing(): This is a debugging tool that can be used to trace
+// In provideRouter: withDebugTracing() is a debugging tool that can be used to trace
 // the execution of the router. It can be useful for debugging complex
 // routing scenarios, but it can also add overhead to the application.
 // It is not recommended to use this in production code.

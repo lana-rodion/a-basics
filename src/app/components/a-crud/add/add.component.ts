@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { GlobalService } from '../../../services/global.service';
+import { Employee } from '../employee';
 
 @Component({
   selector: 'app-add',
@@ -11,23 +12,22 @@ import { GlobalService } from '../../../services/global.service';
   styleUrl: './add.component.css',
 })
 export class AddComponent implements OnInit {
-  // Define properties for the component
-  empData: any; // To store our employee data
+  empDataArray: Array<Employee> = []; // To store our employees data
 
   constructor(private globalService: GlobalService, private router: Router) {}
 
   ngOnInit(): void {
     // Initialize the component when it is loaded
-    this.globalService.getRecords('employees').subscribe(
-      (res) =>
-        // console.log(res)
-        (this.empData = res) // Get all records on screen
-    );
+    /* this.globalService.getRecords('employees').subscribe(
+      (res) => (this.empDataArray = res as Employee[]) // Get all records on screen
+    ); */
   }
 
   addData(data: any) {
+    let lastId = this.empDataArray.length + 1;
+
     const empObj = {
-      id: this.empData.length + 1, // Increment the ID
+      id: lastId,
       name: data.ename,
       post: data.epost,
       salary: data.esalary,
