@@ -1,16 +1,16 @@
 <section class="main">
   <h2>Location Management</h2>
+  <p class="mb-1 bold">Total Locations: {{ count }}</p>
+  <div class="add-item">
+    <a class="add-location" routerLink="/dashboard/create">
+      Add New Location
+    </a>
+  </div>
   <div class="container">
-    <div class="add-item">
-      <a class="add-location" routerLink="/dashboard/location/create">
-        Add New Location
-      </a>
-    </div>
-    <p class="mb-2 bold">Total Locations: {{ count }}</p>
-
     <table>
       <thead>
         <tr>
+          <th>ID</th>
           <th>Location Name</th>
           <th>City</th>
           <th>State</th>
@@ -21,22 +21,35 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let location of housingLocationList; let i = index">
+        <tr *ngFor="let location of housingLocationList">
+          <td>{{ location.id }}</td>
           <td>{{ location.name }}</td>
           <td>{{ location.city }}</td>
           <td>{{ location.state }}</td>
           <td>{{ location.availableUnits }}</td>
-          <td>{{ location.wifi }}</td>
-          <td>{{ location.laundry }}</td>
+          <td>
+            @if(location.wifi === true) {
+            <span>Yes</span>
+            } @else {
+            <span>No</span>
+            }
+          </td>
+          <td>
+            @if(location.laundry === true) {
+            <span>Yes</span>
+            } @else {
+            <span>No</span>
+            }
+          </td>
           <td>
             <a
-              [routerLink]="['/dashboard/location/details', location.id]"
+              [routerLink]="['/details', location.id]"
               [routerLinkActive]="'active'"
             >
               Details
             </a>
             <a
-              [routerLink]="['/dashboard/location/update', location.id]"
+              [routerLink]="['/update', location.id]"
               [routerLinkActive]="'active'"
             >
               Update

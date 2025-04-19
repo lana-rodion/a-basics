@@ -28,7 +28,11 @@ export class LocationDashboardComponent implements OnInit {
     // Initialize the component when it is loaded
     this.auth.getAllLocations().subscribe((response: Object) => {
       const locations = response as HousingLocation[];
-      this.housingLocationList = locations;
+      for (let i in locations) {
+        this.housingLocationList.push(locations[i]);
+      }
+
+      // this.housingLocationList = locations;
       this.count = this.housingLocationList.length;
       console.log(this.housingLocationList);
     });

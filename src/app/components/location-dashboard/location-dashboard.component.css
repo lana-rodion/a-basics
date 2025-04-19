@@ -11,7 +11,11 @@
 
 .main {
   width: 100%;
+  min-height: 0;
+  max-height: calc(100vh - 13rem);
   margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .data {
@@ -48,9 +52,12 @@
 
 .container {
   width: 100%;
-  margin: 50px auto;
-  overflow-x: auto;
-  font-size: 18px;
+  min-height: 0;
+  max-height: 90vh;
+  margin: 0 auto;
+  display: flex;
+  overflow: auto;
+  background: white;
 }
 
 .container table {
