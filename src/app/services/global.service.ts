@@ -8,12 +8,12 @@ import { Employee } from '../components/a-crud/employee';
 export class GlobalService {
   baseURL: string = 'http://localhost:3000'; // where our data is stored in JSON server
 
-  httpOptions = {
+  /* httpOptions = {
     headers: {
       'Content-Type': 'application/json',
       Accept: 'application/json',
     },
-  };
+  }; */
 
   constructor(private http: HttpClient) {} // Injected HTTP Client
 
@@ -48,7 +48,8 @@ export class GlobalService {
   deleteRecord(table: any, id: any) {
     const url = `${this.baseURL}/${table}/${id}`;
     console.log('id', typeof id);
-    return this.http.delete(url, this.httpOptions);
+    // return this.http.delete(url, this.httpOptions);
+    return this.http.delete(url);
   }
 
   // TODO: Implement the login and logout methods

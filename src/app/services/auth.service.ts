@@ -28,14 +28,15 @@ export class AuthService {
     return this.http.post(this.baseURL, location);
   }
   updateLocation(location: any) {
-    const headers = new HttpHeaders()
+    /* const headers = new HttpHeaders()
       .set('X-Auth', 'locationId')
       .set('Content-Type', 'application/json')
-      .set('Accept', 'application/json');
+      .set('Accept', 'application/json'); */
     // Update an existing housing location by its ID
-    return this.http.put(`${this.baseURL}/${location.id}`, location, {
+    /* return this.http.put(`${this.baseURL}/${location.id}`, location, {
       headers,
-    });
+    }); */
+    return this.http.put(`${this.baseURL}/${location.id}`, location);
   }
   deleteLocationById(id: number) {
     // Delete a housing location by its ID

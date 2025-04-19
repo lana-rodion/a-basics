@@ -39,8 +39,14 @@ export class DashboardComponent implements OnInit {
   }
 
   delete(id: any) {
-    this.globalService
-      .deleteRecord('employees', id)
-      .subscribe(() => alert('Record Deleted Successfully'));
+    this.globalService.deleteRecord('employees', id).subscribe(() => {
+      this.empDataArray.splice(
+        this.empDataArray.findIndex((emp) => emp.id === id),
+        1
+      );
+      // Remove the deleted record from the array
+      this.count = this.empDataArray.length; // Update the count
+      alert('Record Deleted Successfully');
+    });
   }
 }

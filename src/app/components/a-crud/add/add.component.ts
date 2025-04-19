@@ -18,16 +18,16 @@ export class AddComponent implements OnInit {
 
   ngOnInit(): void {
     // Initialize the component when it is loaded
-    /* this.globalService.getRecords('employees').subscribe(
+    this.globalService.getRecords('employees').subscribe(
       (res) => (this.empDataArray = res as Employee[]) // Get all records on screen
-    ); */
+    );
   }
 
   addData(data: any) {
-    let lastId = this.empDataArray.length + 1;
+    let id = this.empDataArray.length + 1;
 
     const empObj = {
-      id: lastId,
+      id: id,
       name: data.ename,
       post: data.epost,
       salary: data.esalary,
