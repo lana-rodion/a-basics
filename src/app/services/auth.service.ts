@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -14,19 +14,28 @@ export class AuthService {
 
   getAllLocations() {
     // Fetch all housing locations from the API endpoint
-    return this.http.get(this.baseURL);
+    // The HttpParams object is used to set the request parameters
+    const params = new HttpParams().set('page', '1').set('pageSize10', '10');
+    // The get method is used to make a GET request to the API endpoint
+    return this.http.get(this.baseURL, { params, observe: 'body' });
   }
   getLocationById(id: number) {
     // Fetch a specific housing location by its ID
     return this.http.get(`${this.baseURL}/${id}`);
   }
-  createNewLocation(location: any) {
+  createLocation(location: any) {
     // Submit a new housing location to the API endpoint
     return this.http.post(this.baseURL, location);
   }
   updateLocation(location: any) {
+    const headers = new HttpHeaders()
+      .set('X-Auth', 'locationId')
+      .set('Content-Type', 'application/json')
+      .set('Accept', 'application/json');
     // Update an existing housing location by its ID
-    return this.http.put(`${this.baseURL}/${location.id}`, location);
+    return this.http.put(`${this.baseURL}/${location.id}`, location, {
+      headers,
+    });
   }
   deleteLocationById(id: number) {
     // Delete a housing location by its ID
