@@ -145,7 +145,7 @@
       "name": "Caramel",
       "city": "Toulon",
       "state": "FR83",
-      "photo": "C:\\fakepath\\20170816_164319.jpg",
+      "photo": "",
       "availableUnits": 4,
       "wifi": "true",
       "laundry": false
@@ -163,53 +163,88 @@
   ],
   "employees": [
     {
-      "id": 102,
+      "id": 1,
       "name": "Alex",
       "post": "Junior Manager ",
       "salary": "20000",
       "address": "Moscow"
     },
     {
-      "id": 103,
+      "id": 2,
       "name": "Joe",
       "post": "Associate",
       "salary": "28000",
       "address": "USA"
     },
     {
-      "id": 104,
+      "id": 3,
       "name": "Kevin",
       "post": "Test Lead",
       "salary": "32000",
       "address": "Berlin"
     },
     {
-      "id": 105,
+      "id": 4,
       "name": "Albert",
       "post": "QA Lead",
       "salary": "50000",
       "address": "Brazil"
     },
     {
-      "id": 106,
+      "id": 5,
       "name": "Alex",
       "post": "Intern",
       "salary": "5000",
       "address": "USA"
     },
     {
-      "id": 107,
+      "id": 6,
       "name": "Peter",
       "post": "Trainee",
       "salary": "11000",
       "address": "Rome"
     },
     {
-      "id": 108,
+      "id": 7,
       "name": "Graham",
       "post": "Production Engineer",
       "salary": "75000",
       "address": "Michigan"
+    },
+    {
+      "id": 8,
+      "name": "James Gordon",
+      "post": "Account Manager",
+      "salary": "100000",
+      "address": "New-York"
+    },
+    {
+      "id": 9,
+      "name": "Bryan White",
+      "post": "Director",
+      "salary": "120000",
+      "address": "Tallinn"
+    },
+    {
+      "id": 10,
+      "name": "Blue Smoke",
+      "post": "Writer",
+      "salary": "95000",
+      "address": "Paris"
+    },
+    {
+      "id": 11,
+      "name": "Red Pipper",
+      "post": "Stylist",
+      "salary": "125000",
+      "address": "Paris"
+    },
+    {
+      "id": 12,
+      "name": "Martin Dupont",
+      "post": "CTO",
+      "salary": "200000",
+      "address": "Milan"
     }
   ]
 }
