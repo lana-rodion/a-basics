@@ -106,8 +106,12 @@ The data source has been configured, the next step is to update your web app to 
 
 ## Running Angular Application and JSON-Server With Same Startup Script
 
-`"start": "json-server --watch db.json & ng serve"`
+`"start": "json-server db.json & ng serve --no-hmr"`
 
 ## Command in terminal to running application with JSON-Server
 
 `npm run start`
+
+## Editor and Workbench Custom ScrollbarSize and Colors
+
+You can find it in .vscode/ settings.json
