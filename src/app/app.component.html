@@ -3,6 +3,16 @@
     <ul>
       <li>
         <a
+          [routerLink]="['/crud']"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{ exact: true }"
+          ariaCurrentWhenActive="page"
+        >
+          CRUD Dashboard
+        </a>
+      </li>
+      <li>
+        <a
           [routerLink]="['/dashboard']"
           [routerLinkActive]="'active'"
           [routerLinkActiveOptions]="{ exact: true }"

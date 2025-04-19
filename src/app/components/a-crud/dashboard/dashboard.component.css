@@ -1,0 +1,51 @@
+@charset "utf-8";
+@import "bootstrap/dist/css/bootstrap.css";
+/* @import "bootstrap-icons/font/bootstrap-icons.css"; */
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+:host {
+  width: 100vw;
+  height: calc(100vh - 9rem);
+  display: block;
+  padding: 1rem 3rem 3rem;
+  position: absolute;
+  top: 9rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0 15px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.btn-primary {
+  height: 40px;
+  padding: 0 15px;
+  font-weight: 600;
+  color: white;
+  background: var(--french-violet);
+  border: 1px solid var(--french-violet);
+  border-radius: 5px;
+  outline: none;
+}
+
+.btn-outline-info {
+  color: var(--french-violet);
+  background: transparent;
+  border: 1px solid var(--french-violet);
+}
+
+.btn-outline-danger {
+  color: var(--hot-red);
+  background: transparent;
+  border: 1px solid var(--hot-red);
+}
+
+tbody tr td {
+  vertical-align: middle;
+}
