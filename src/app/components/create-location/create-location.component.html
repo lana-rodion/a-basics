@@ -1,0 +1,36 @@
+<div class="main">
+  <div class="container">
+    <h2>Create User Form</h2>
+    <form [formGroup]="createFormGroup">
+      <input id="id" type="number" formControlName="id" />
+      <label for="name">Location Name:</label>
+      <input id="name" type="text" formControlName="name" required />
+      <label for="city">City:</label>
+      <input id="city" type="text" formControlName="city" required />
+      <label for="state">State:</label>
+      <input id="state" type="text" formControlName="state" required />
+      <label for="photo">Photo:</label>
+      <input id="photo" type="file" formControlName="photo" />
+      <label for="availableUnits">Available Units:</label>
+      <input
+        id="availableUnits"
+        type="number"
+        formControlName="availableUnits"
+        min="1"
+        required
+      />
+      <label for="wifi">Wi-Fi:</label>
+      <input id="wifi" type="text" formControlName="wifi" />
+      <label for="laundry">Laundry:</label>
+      <input id="laundry" type="text" formControlName="laundry" />
+      <button class="btn-clear mr-1" type="button" (click)="back()">
+        Return back
+      </button>
+      <button class="mr-2" type="submit" (click)="createLocation()">
+        Create
+      </button>
+      <span class="ml-1" [class]="isValid">{{ msg }}</span>
+    </form>
+    <div class="mt-2">{{ createFormGroup.value | json }}</div>
+  </div>
+</div>
