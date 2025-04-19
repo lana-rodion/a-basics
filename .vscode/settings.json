@@ -2,5 +2,19 @@
   "editor.tabSize": 4,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
-  "editor.formatOnPaste": true
+  "editor.formatOnPaste": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.scrollbar.verticalScrollbarSize": 5,
+  "editor.scrollbar.horizontal": "visible",
+  "editor.scrollbar.horizontalScrollbarSize": 5,
+  "workbench.editor.titleScrollbarSizing": "large",
+  "workbench.colorCustomizations": {
+    "gitDecoration.modifiedResourceForeground": "#78b8ff",
+    "activityBar.activeBorder": "#c9ff36",
+    "activityBar.activeBackground": "#424b67",
+    "tab.activeBorder": "#c9ff36",
+    "tab.activeBackground": "#2e3b72",
+    "sideBar.background": "#14141a",
+    "list.inactiveSelectionBackground": "#3c444b"
+  }
 }
