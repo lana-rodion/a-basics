@@ -1,7 +1,7 @@
 {
   "locations": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Acme Fresh Start Housing",
       "city": "Chicago",
       "state": "IL",
@@ -11,7 +11,7 @@
       "laundry": true
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "A113 Transitional Housing",
       "city": "Santa Monica",
       "state": "CA",
@@ -21,7 +21,7 @@
       "laundry": true
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Warm Beds Housing Support",
       "city": "Juneau",
       "state": "AK",
@@ -31,7 +31,7 @@
       "laundry": false
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Homesteady Housing",
       "city": "Chicago",
       "state": "IL",
@@ -41,7 +41,7 @@
       "laundry": false
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Happy Homes Group",
       "city": "Gary",
       "state": "IN",
@@ -51,7 +51,7 @@
       "laundry": false
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Hopeful Apartment Group",
       "city": "Oakland",
       "state": "CA",
@@ -61,7 +61,7 @@
       "laundry": true
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Seriously Safe Towns",
       "city": "Oakland",
       "state": "CA",
@@ -71,7 +71,7 @@
       "laundry": true
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Hopeful Housing Solutions",
       "city": "Oakland",
       "state": "CA",
@@ -81,7 +81,7 @@
       "laundry": true
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Seriously Safe Towns",
       "city": "Oakland",
       "state": "CA",
@@ -91,7 +91,7 @@
       "laundry": false
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Capital Safe Towns",
       "city": "Portland",
       "state": "OR",
@@ -101,7 +101,7 @@
       "laundry": true
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Hayden",
       "city": "New-York",
       "state": "NY",
@@ -111,7 +111,7 @@
       "laundry": "true"
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Sky",
       "city": "Paris",
       "state": "PH",
@@ -121,7 +121,7 @@
       "laundry": false
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Split Paradise",
       "city": "Split",
       "state": "YG",
@@ -131,7 +131,7 @@
       "laundry": false
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Le Petit Loup",
       "city": "Lourdes",
       "state": "FR65",
@@ -141,7 +141,7 @@
       "laundry": false
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Caramel",
       "city": "Toulon",
       "state": "FR83",
@@ -151,7 +151,7 @@
       "laundry": false
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Flower",
       "city": "Fine",
       "state": "FL",
@@ -165,86 +165,79 @@
     {
       "id": 1,
       "name": "Alex",
-      "post": "Junior Manager ",
-      "salary": "20000",
+      "post": "Senior Manager ",
+      "salary": 40000,
       "address": "Moscow"
     },
     {
       "id": 2,
       "name": "Joe",
       "post": "Associate",
-      "salary": "28000",
+      "salary": 28000,
       "address": "USA"
     },
     {
       "id": 3,
       "name": "Kevin",
       "post": "Test Lead",
-      "salary": "32000",
+      "salary": 32000,
       "address": "Berlin"
     },
     {
       "id": 4,
       "name": "Albert",
       "post": "QA Lead",
-      "salary": "50000",
+      "salary": 50000,
       "address": "Brazil"
     },
     {
       "id": 5,
       "name": "Alex",
       "post": "Intern",
-      "salary": "5000",
+      "salary": 5000,
       "address": "USA"
     },
     {
       "id": 6,
       "name": "Peter",
       "post": "Trainee",
-      "salary": "11000",
+      "salary": 11000,
       "address": "Rome"
     },
     {
       "id": 7,
       "name": "Graham",
       "post": "Production Engineer",
-      "salary": "75000",
+      "salary": 75000,
       "address": "Michigan"
     },
     {
       "id": 8,
       "name": "James Gordon",
       "post": "Account Manager",
-      "salary": "100000",
+      "salary": 100000,
       "address": "New-York"
     },
     {
       "id": 9,
       "name": "Bryan White",
       "post": "Director",
-      "salary": "120000",
+      "salary": 120000,
       "address": "Tallinn"
     },
     {
       "id": 10,
       "name": "Blue Smoke",
       "post": "Writer",
-      "salary": "95000",
+      "salary": 95000,
       "address": "Paris"
     },
     {
       "id": 11,
       "name": "Red Pipper",
       "post": "Stylist",
-      "salary": "125000",
+      "salary": 125000,
       "address": "Paris"
-    },
-    {
-      "id": 12,
-      "name": "Martin Dupont",
-      "post": "CTO",
-      "salary": "200000",
-      "address": "Milan"
     }
   ]
 }
