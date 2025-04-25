@@ -41,7 +41,7 @@
     <!-- | filter : term -->
     <tr
       *ngFor="
-        let e of empDataArray
+        let e of empList
           | paginate : { itemsPerPage: countPerPage, currentPage: p }
       "
     >
