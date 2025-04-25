@@ -11,37 +11,41 @@ import { EditComponent } from './components/a-crud/edit/edit.component';
 
 export const routeConfig: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent, title: 'All locations' },
   {
-    path: 'dashboard',
+    path: 'locations',
     component: LocationDashboardComponent,
-    title: 'Dashboard',
+    title: 'Location Management',
   },
   {
-    path: 'dashboard/create',
+    path: 'locations/create',
     component: CreateLocationComponent,
     title: 'Create new location',
   },
-  { path: 'home', component: HomeComponent, title: 'All locations' },
-  { path: 'details/:id', component: DetailsComponent, title: 'Details page' },
   {
-    path: 'details/:id/update',
+    path: 'locations/details/:id',
+    component: DetailsComponent,
+    title: 'Details page',
+  },
+  {
+    path: 'locations/details/:id/update',
     component: UpdateLocationComponent,
     title: 'Update location',
   },
   {
-    path: 'crud',
+    path: 'employees',
     component: DashboardComponent,
-    title: 'CRUD Dashboard',
+    title: 'Employees List',
   },
   {
-    path: 'crud/add',
+    path: 'employees/add',
     component: AddComponent,
-    title: 'Add',
+    title: 'Add New Employee',
   },
   {
-    path: 'crud/edit/:id',
+    path: 'employees/edit/:id',
     component: EditComponent,
-    title: 'Edit',
+    title: 'Edit Employee Data',
   },
   { path: 'get-value', component: GetValueComponent, title: 'Get Value' },
 ];
