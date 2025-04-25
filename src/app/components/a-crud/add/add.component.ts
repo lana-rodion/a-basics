@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { GlobalService } from '../../../services/global.service';
+import { EmployeeService } from '../../../services/employee.service';
 import { Employee } from '../employee';
 
 @Component({
@@ -14,11 +14,14 @@ import { Employee } from '../employee';
 export class AddComponent implements OnInit {
   empDataArray: Array<Employee> = []; // To store our employees data
 
-  constructor(private globalService: GlobalService, private router: Router) {}
+  constructor(
+    private employeeService: EmployeeService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     // Initialize the component when it is loaded
-    this.globalService.getRecords('employees').subscribe(
+    this.employeeService.getRecords().subscribe(
       (res) => (this.empDataArray = res as Employee[]) // Get all records on screen
     );
   }
@@ -34,7 +37,7 @@ export class AddComponent implements OnInit {
       address: data.ecity,
     };
 
-    this.globalService.addRecord('employees', empObj).subscribe(() => {
+    this.employeeService.addRecord(empObj).subscribe(() => {
       alert('Record Added');
       this.router.navigate(['/crud']); // After successfull insertion of data, go back to home page automatically
     });
