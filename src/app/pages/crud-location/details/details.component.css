@@ -31,7 +31,7 @@ article {
   height: 28px;
   content: "";
   display: inline-block;
-  mask-image: url("../../../assets/icons/pin-fill-sharp-circle.svg");
+  mask-image: url("../../../../assets/icons/pin-fill-sharp-circle.svg");
   mask-size: 28px 28px;
   mask-repeat: no-repeat;
   mask-position: center;

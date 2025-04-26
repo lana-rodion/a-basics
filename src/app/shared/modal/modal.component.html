@@ -1,0 +1,5 @@
+<div #myModal class="container" (click)="close()">
+  <div (click)="$event.stopPropagation()" class="content">
+    <ng-content></ng-content>
+  </div>
+</div>

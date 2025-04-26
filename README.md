@@ -72,15 +72,18 @@ For more information on using the Angular CLI, including detailed command refere
 npm install -g json-server
 ```
 
-2. In the root directory of your project, create a file called db.json. This is where you will store the data for the json-server.
-
-3. Test your your configuration. From the command line, at the root of your project run the following commands.
+2. The version "1.0.0-beta.3" of json-server trnsform ID number `{"id": 1}` in a string `{"id": "1"}`.
+3. So after I downgraded from "1.0.0-beta.3" to "^0.17.4", the problem was solved.
+4. If you need to have IDs as a number, install `npm install -g json-server@0.17.4`
+5. In the root directory of your project, create a file called `db.json`.
+6. This is where you will store the data for the json-server.
+7. Test your your configuration. From the command line, at the root of your project run the following commands.
 
 ```bash
 json-server --watch db.json
 ```
 
-4. In your web browser, navigate to the [http://localhost:3000/name-of-data-stored] and confirm that the response includes the data stored in db.json.
+8. In your web browser, navigate to the [http://localhost:3000/name-of-data-stored] and confirm that the response includes the data stored in db.json.
 
 Index:
 http://localhost:3000/

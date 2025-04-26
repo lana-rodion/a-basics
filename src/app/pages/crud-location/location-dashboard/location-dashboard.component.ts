@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { HousingService } from '../housing-location/housing.service';
 import { HousingLocation } from '../housing-location/housinglocation.interface';
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../../../services/auth.service';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 

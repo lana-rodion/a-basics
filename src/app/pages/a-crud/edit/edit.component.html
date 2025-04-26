@@ -1,0 +1,29 @@
+<form [formGroup]="myGroup" (ngSubmit)="submit(myGroup)">
+  <input type="number" formControlName="id" style="display: none" />
+  <label>Enter Employee Name : </label>
+  <input formControlName="name" id="name" type="text" class="form-control" />
+
+  <label>Enter Employee Post : </label>
+  <input formControlName="post" id="post" type="text" class="form-control" />
+
+  <label>Enter Employee Salary : </label>
+  <input
+    formControlName="salary"
+    id="salary"
+    type="number"
+    class="form-control"
+  />
+
+  <label>Enter Employee City : </label>
+  <input
+    formControlName="address"
+    id="address"
+    type="text"
+    class="form-control"
+  />
+
+  <button type="button" class="btn-clear mt-1 mr-1" (click)="back()">
+    Go to back
+  </button>
+  <button class="btn btn-warning mt-1" type="submit">Update</button>
+</form>

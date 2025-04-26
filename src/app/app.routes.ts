@@ -1,13 +1,13 @@
 import { Routes } from '@angular/router';
-import { GetValueComponent } from './components/get-value/get-value.component';
-import { HomeComponent } from './components/home/home.component';
-import { DetailsComponent } from './components/details/details.component';
-import { LocationDashboardComponent } from './components/location-dashboard/location-dashboard.component';
-import { UpdateLocationComponent } from './components/update-location/update-location.component';
-import { CreateLocationComponent } from './components/create-location/create-location.component';
-import { DashboardComponent } from './components/a-crud/dashboard/dashboard.component';
-import { AddComponent } from './components/a-crud/add/add.component';
-import { EditComponent } from './components/a-crud/edit/edit.component';
+import { GetValueComponent } from './pages/get-value/get-value.component';
+import { HomeComponent } from './pages/crud-location/home/home.component';
+import { DetailsComponent } from './pages/crud-location/details/details.component';
+import { LocationDashboardComponent } from './pages/crud-location/location-dashboard/location-dashboard.component';
+import { UpdateLocationComponent } from './pages/crud-location/update-location/update-location.component';
+import { CreateLocationComponent } from './pages/crud-location/create-location/create-location.component';
+import { DashboardComponent } from './pages/a-crud/dashboard/dashboard.component';
+import { AddComponent } from './pages/a-crud/add/add.component';
+import { EditComponent } from './pages/a-crud/edit/edit.component';
 
 export const routeConfig: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
