@@ -10,8 +10,8 @@ export class EmployeeService {
   empList: Employee[] = []; // To store our employees data
   httpClient = inject(HttpClient);
 
-  baseURL: string = 'http://localhost:3000/employees'; // where our data is stored in JSON server
-  // constructor(private httpClient: HttpClient) {} // Injected HTTP Client
+  // where our data is stored in JSON server
+  baseURL: string = 'http://localhost:3000/employees';
 
   getRecords(): Observable<Employee[]> {
     return this.httpClient.get<Employee[]>(this.baseURL);
@@ -29,13 +29,6 @@ export class EmployeeService {
   }
 
   updateRecord(id: number, empData: Employee) {
-    /* return this.httpClient.put<Employee>(this.baseURL + '/' + id, {
-      id: empData.id,
-      name: empData.name,
-      post: empData.post,
-      salary: empData.salary,
-      address: empData.address,
-    }); */
     const updatedEmpData = {
       id: Number(empData.id),
       name: empData.name,

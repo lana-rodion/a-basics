@@ -28,7 +28,7 @@ export const routeConfig: Routes = [
     title: 'Details page',
   },
   {
-    path: 'locations/details/:id/update',
+    path: 'locations/details/update/:id',
     component: UpdateLocationComponent,
     title: 'Update location',
   },
