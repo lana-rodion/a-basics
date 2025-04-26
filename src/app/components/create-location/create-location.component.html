@@ -1,28 +1,51 @@
 <div class="main">
   <div class="container">
     <h2>Create User Form</h2>
-    <form [formGroup]="createFormGroup">
-      <input id="id" type="number" formControlName="id" />
+    <form [formGroup]="createFormGroup" action="" method="">
       <label for="name">Location Name:</label>
-      <input id="name" type="text" formControlName="name" required />
+      <input
+        type="text"
+        id="name"
+        name="name"
+        formControlName="name"
+        required
+      />
       <label for="city">City:</label>
-      <input id="city" type="text" formControlName="city" required />
+      <input
+        type="text"
+        id="city"
+        name="city"
+        formControlName="city"
+        required
+      />
       <label for="state">State:</label>
-      <input id="state" type="text" formControlName="state" required />
+      <input
+        type="text"
+        id="state"
+        name="state"
+        formControlName="state"
+        required
+      />
       <label for="photo">Photo:</label>
-      <input id="photo" type="file" formControlName="photo" />
+      <input id="photo" name="photo" type="file" formControlName="photo" />
       <label for="availableUnits">Available Units:</label>
       <input
-        id="availableUnits"
         type="number"
+        id="availableUnits"
+        name="availableUnits"
         formControlName="availableUnits"
         min="1"
         required
       />
       <label for="wifi">Wi-Fi:</label>
-      <input id="wifi" type="text" formControlName="wifi" />
+      <input id="wifi" name="wifi" type="text" formControlName="wifi" />
       <label for="laundry">Laundry:</label>
-      <input id="laundry" type="text" formControlName="laundry" />
+      <input
+        type="text"
+        id="laundry"
+        name="laundry"
+        formControlName="laundry"
+      />
       <button class="btn-clear mr-1" type="button" (click)="back()">
         Return back
       </button>
@@ -31,6 +54,5 @@
       </button>
       <span class="ml-1" [class]="isValid">{{ msg }}</span>
     </form>
-    <div class="mt-2">{{ createFormGroup.value | json }}</div>
   </div>
 </div>

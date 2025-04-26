@@ -25,17 +25,10 @@ export class AuthService {
   }
   createLocation(location: any) {
     // Submit a new housing location to the API endpoint
-    return this.http.post(this.baseURL, location);
+    // adding id for the beginning
+    return this.http.post(this.baseURL, { ...location });
   }
   updateLocation(location: any) {
-    /* const headers = new HttpHeaders()
-      .set('X-Auth', 'locationId')
-      .set('Content-Type', 'application/json')
-      .set('Accept', 'application/json'); */
-    // Update an existing housing location by its ID
-    /* return this.http.put(`${this.baseURL}/${location.id}`, location, {
-      headers,
-    }); */
     return this.http.put(`${this.baseURL}/${location.id}`, location);
   }
   deleteLocationById(id: number) {

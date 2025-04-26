@@ -15,11 +15,10 @@ export class CreateLocationComponent implements OnInit {
   @Input() fileToUpload: File | null = null;
 
   fileName: string = '';
-  loading: boolean = false;
   msg: string = '';
   isValid: string = '';
   createFormGroup: FormGroup = new FormGroup({});
-  id: number = 0;
+  id: number | null = null;
 
   constructor(
     private router: Router,
@@ -28,10 +27,9 @@ export class CreateLocationComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Initialize the component when it is loaded
-    // this.loading = false;
+    // Initialize the component
     this.createFormGroup = this.fb.group({
-      id: [this.id + 1],
+      // There is not the id before location will created
       name: [''],
       city: [''],
       state: [''],
@@ -47,46 +45,42 @@ export class CreateLocationComponent implements OnInit {
   }
 
   createLocation() {
-    this.auth.getAllLocations().subscribe((locations: any) => {
-      for (let i in locations) {
-        this.id = locations[i].id;
-        this.createFormGroup.get('id')?.setValue(this.id);
-      }
-      //return (this.id = locations.length + 1);
-      return this.id;
-    });
-    let name = this.createFormGroup.get('name')?.value;
-    let city = this.createFormGroup.get('city')?.value;
-    let state = this.createFormGroup.get('state')?.value;
-    let photo = this.createFormGroup.get('photo')?.value;
-    let availableUnits = this.createFormGroup.get('availableUnits')?.value;
-    let wifi = this.createFormGroup.get('wifi')?.value;
-    let laundry = this.createFormGroup.get('laundry')?.value;
+    const newLocation = {
+      id: this.id,
+      name: this.createFormGroup.get('name')?.value,
+      city: this.createFormGroup.get('city')?.value,
+      state: this.createFormGroup.get('state')?.value,
+      photo: this.createFormGroup.get('photo')?.value,
+      availableUnits: this.createFormGroup.get('availableUnits')?.value,
+      wifi: this.createFormGroup.get('wifi')?.value,
+      laundry: this.createFormGroup.get('laundry')?.value,
+    };
 
     if (
-      name.trim().length == 0 ||
-      city.trim().length == 0 ||
-      state.trim().length == 0 ||
-      availableUnits.length == 0
+      newLocation.name.trim().length == 0 ||
+      newLocation.city.trim().length == 0 ||
+      newLocation.state.trim().length == 0 ||
+      newLocation.availableUnits.length == 0
     ) {
       this.msg = 'Please fill all the requiered fields';
       this.isValid = 'invalid';
       return;
-    } else if (photo == this.fileToUpload) {
+    } else if (newLocation.photo == this.fileToUpload) {
       this.msg = 'Please upload a photo';
       this.isValid = 'invalid';
-    } else if (wifi == null) {
+    } else if (newLocation.wifi == null) {
       this.msg = 'Please select wifi option';
       this.isValid = 'invalid';
-    } else if (laundry == null) {
+    } else if (newLocation.laundry == null) {
       this.msg = 'Please select laundry option';
       this.isValid = 'invalid';
     } else {
-      this.auth.createLocation(this.createFormGroup.value).subscribe(() => {
+      this.auth.createLocation(newLocation).subscribe(() => {
         this.msg = 'Location created successfully';
+        confirm(this.msg);
         this.isValid = 'valid';
         setTimeout(() => {
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['/locations']);
         }, 2000);
       });
     }
