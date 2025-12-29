@@ -1,9 +1,5 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import {
-  provideRouter,
-  withComponentInputBinding,
-  withDebugTracing,
-} from '@angular/router';
+import { provideRouter, withComponentInputBinding } from '@angular/router';
 import { routeConfig } from './app.routes';
 import {
   provideClientHydration,

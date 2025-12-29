@@ -9,7 +9,10 @@
       [routerLinkActive]="['active']"
       [routerLinkActiveOptions]="{ exact: true }"
     >
-      <i class="fas fa-plus-square" aria-hidden="true"></i>
+      <i
+        class="fas fa-plus-square"
+        aria-hidden="true"
+      ></i>
       Add new employee
     </button>
   </div>
@@ -39,12 +42,8 @@
   </thead>
   <tbody>
     <!-- | filter : term -->
-    <tr
-      *ngFor="
-        let e of empList
-          | paginate : { itemsPerPage: countPerPage, currentPage: p }
-      "
-    >
+    @for (e of empList | paginate : { itemsPerPage: countPerPage, currentPage: p }; track e.id) {
+    <tr>
       <!--Doing multiple things here, for loop to obtain all data, doing pagination and using filter for search bar-->
       <td>{{ e.id }}</td>
       <td>{{ e.name }}</td>
@@ -57,7 +56,10 @@
           class="btn btn-outline-info"
           [routerLink]="['edit', e.id]"
         >
-          <i class="fa fa-pencil" aria-hidden="true"></i>
+          <i
+            class="fa fa-pencil"
+            aria-hidden="true"
+          ></i>
         </button>
         <!--Tis will take us to edit component, where edit logic is written -->
         💠
@@ -66,11 +68,15 @@
           class="btn btn-outline-danger"
           (click)="delete(e.id)"
         >
-          <i class="fas fa-trash-can" aria-hidden="true"></i>
+          <i
+            class="fas fa-trash-can"
+            aria-hidden="true"
+          ></i>
         </button>
         <!--Calling delete function to remove the record-->
       </td>
     </tr>
+    }
   </tbody>
 </table>
 <div class="text-right">

@@ -1,10 +1,10 @@
-# ABasics
+# A-basics
 
 This is an Angular training project to improve understanding of the framework's principles such as components, services, routing, data binding, signals, styles, etc.
 
 ## Angular CLI
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.6.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version **21.0.4**.
 
 ## Development server
 
